@@ -19,7 +19,7 @@ import javax.servlet.ServletResponse;
    /JavaWeb20210531 -> Context path, 要到 META-INF/context.xml 中設定與配置
    /hi -> url-pattern, 要到 web.xml 中設定與配置
 */
-public class HelloGenericSeverlet extends GenericServlet{
+public class HelloGenericServlet extends GenericServlet{
 
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
@@ -31,7 +31,7 @@ public class HelloGenericSeverlet extends GenericServlet{
         out.print("Hi: ");//把訊息寫在 HTTP Response 文件的 Part 4
         out.print(name);
         out.print(" "+new Date());
-        System.out.printf("Hi %s %s\n",name, new Date());//印在 Sever 的 console 中(通常用於 debug 或開發上觀察變數)
+        //System.out.printf("Hi %s %s\n",name, new Date());//印在 Sever 的 console 中(通常用於 debug 或開發上觀察變數)
     }
     
 }
