@@ -14,6 +14,11 @@ import javax.servlet.ServletResponse;
  * @author q0985
  * Generic Severlet 
  */
+/* 
+   Client 請求URL http://localhost:8080/JavaWeb20210531/hi?name=John
+   /JavaWeb20210531 -> Context path, 要到 META-INF/context.xml 中設定與配置
+   /hi -> url-pattern, 要到 web.xml 中設定與配置
+*/
 public class HelloGenericSeverlet extends GenericServlet{
 
     @Override

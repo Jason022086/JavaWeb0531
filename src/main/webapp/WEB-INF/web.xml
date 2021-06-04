@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <!-- 宣告 Severlet -->
+    <servlet>
+        <servlet-name>>HelloGenericSeverlet</servlet-name>
+        <servlet-class>com.web.controller.HelloGenericSeverlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>>HelloHttpServlet</servlet-name>
+        <servlet-class>com.web.controller.HelloHttpServlet</servlet-class>
+    </servlet>
+    
+    <!-- Servlet Client URL Pattern 對應設定 -->
+    <servlet-mapping>
+        <url-pattern>/hi</url-pattern>
+        <servlet-name>HelloGenericSeverlet</servlet-name>         
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <url-pattern>/hello</url-pattern>
+        <servlet-name>HelloHttpServlet</servlet-name>         
+    </servlet-mapping>
+    
+</web-app>
